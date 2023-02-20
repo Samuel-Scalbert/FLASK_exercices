@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Factbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="bg-image" style="
+    background-image: url('https://www.cia.gov/the-world-factbook/static/778a257ec6e116fbb7aac018c170b3eb/47498/wfb-feature-world.jpg');
+    height: 450px; width:100%;overflow:hidden;margin-top: -300px;"></div>
+
+
+
+    <div class="container">
+        <h1>Bienvenue sur l'application du Factbook!</h1>
+        <p>Voici le lien vers le site officiel : <a
+                href="https://www.cia.gov/the-world-factbook/">https://www.cia.gov/the-world-factbook/</a></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <div>
+      <p>Le parc de {{parc.get("1_f_commune_pdl")}}</p>
+        <ul style="list-style-type:square">
+            <li>Nom de la Région : {{parc.nom_reg}}</li>
+            <li>Nom du département : {{parc.nom_dept}}</li>
+            <li>Code du département : {{parc.dep}}</li>
+            <li>Nom de la commune : {{parc.get("1_f_commune_pdl")}}</li>
+            <li>Nom de l'ECPI : {{parc.libepci}}</li>
+            <li>Date des données : {{parc.date_des_donnees}}</li>
+            <li>Longitude : {{parc.coordonnees.lon}}</li>
+            <li>Latitudes : {{parc.coordonnees.lat}}</li>
+        </ul>
+    </div>
+</body>
+
+</html>
