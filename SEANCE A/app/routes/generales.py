@@ -2,7 +2,7 @@ from ..app import app
 from flask import render_template
 from ..app import app,db
 from sqlalchemy import text
-from ..models.factbook import Country
+from ..models.factbook import Country, Aera, Map
 import json
 
 @app.route("/")
