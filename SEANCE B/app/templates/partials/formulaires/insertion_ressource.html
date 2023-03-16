@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<form action="{{url_for('insertion_pays')}}" method="post" name="insertion_pays">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+        <label for="ressources">Ressources possédées</label>
+        {{ form.ressources(class_="form-control") }}
+        <small id="ressources" class="form-text text-muted">Sélectionner une ou plusieurs ressources possédées par le pays</small>
+    </div>
+
+    <p><input type="submit" value="Insérer"></p>
+</form>
